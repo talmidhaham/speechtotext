@@ -89,7 +89,7 @@ this.recognition.onresult = function(event) {
 }
 
 this.recognition.onspeechend = function() {
-  //this.recognition.stop();
+  this.recognition.stop();
 }
 
 this.recognition.onnomatch = function(event) {
