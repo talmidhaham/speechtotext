@@ -37,8 +37,8 @@ this.recognition.interimResults = false;
 this.recognition.maxAlternatives = 1;
 
 //var diagnostic = document.querySelector('.output');
-var bg = document.querySelector('html');
-var hints = document.querySelector('.hints');
+// var bg = document.querySelector('html');
+// var hints = document.querySelector('.hints');
 
 var colorHTML= '';
 // colors.forEach(function(v, i, a){
@@ -84,13 +84,12 @@ this.recognition.onresult = function(event) {
       ul.appendChild(li);
   }
   //diagnostic.textContent = 'Result received: ' + color + '.';
-  bg.style.backgroundColor = color;
   console.log('Confidence: ' + event.results[0][0].confidence);
 }
 
-this.recognition.onspeechend = function() {
-  this.recognition.stop();
-}
+// this.recognition.onspeechend = function() {
+//   this.recognition.stop();
+// }
 
 this.recognition.onnomatch = function(event) {
   //diagnostic.textContent = "I didn't recognise that color.";
