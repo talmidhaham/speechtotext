@@ -53,14 +53,14 @@ var colorHTML= '';
 // }
 
 this.recognition.onstart = function() {
-  this.recognizing = true;
+
   document.getElementById('buttonText').innerText = 'Stop Recording';
   document.getElementById('speechButton').classList.add('recording');
 };
 
 
 this.recognition.onend = function() {
-  this.recognizing = false;
+
   document.getElementById('buttonText').innerText = 'Start Recording';
   document.getElementById('speechButton').classList.remove('recording');
 };
@@ -104,9 +104,12 @@ this.recognition.onerror = function(event) {
 toggleRecording() {
   console.log('hello toogle');
   if (this.recognizing) {
+    this.recognizing = false;
     this.recognition.stop();
   } else {
+    this.recognizing = true;
     this.recognition.start();
+
   }
 }
 }
