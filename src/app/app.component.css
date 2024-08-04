@@ -1,0 +1,127 @@
+body,
+html {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1,
+p {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+div {
+  height: 100px;
+  overflow: auto;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+ul {
+  margin: 0;
+}
+
+.hints span {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button.recording {
+  background-color: #f44336; /* Red */
+}
+
+.microphone-icon {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+
+.microphone-icon::before,
+.microphone-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #4CAF50;
+  width: 8px;
+  height: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.microphone-icon::before {
+  top: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+.microphone-icon::after {
+  top: 16px;
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+button.recording .microphone-icon {
+  background-color: white;
+}
+
+button.recording .microphone-icon::before,
+button.recording .microphone-icon::after {
+  background-color: #f44336;
+}
+
+#buttonText {
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  width: 300px;
+  height: 200px; /* Fixed height */
+  overflow-y: scroll; /* Enable vertical scroll */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+li {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+}
